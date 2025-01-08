@@ -67,6 +67,11 @@ const enableBoxes = () => {
 };
 
 const showWinner = (winner) => {
+  if (winner === "X") {
+    winner = "Player X";
+  } else {
+    winner = "Player O";  
+  }
   msg.innerText = `Congratulations, Winner is ${winner}`;
   msgContainer.classList.remove("hide");
   disableBoxes();
